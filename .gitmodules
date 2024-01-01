@@ -1,6 +1,15 @@
-[submodule "gateway-service"]
-	url = https://www.github.com/Slimani-CE/ds-exam-gateway-service.git
-[submodule "reservation-service"]
-	url = https://www.github.com/Slimani-CE/ds-exam-reservation-service.git
 [submodule "resource-service"]
-	url = https://www.github.com/Slimani-CE/ds-exam-resource-service.git
+	path = resource-service
+	url = https://github.com/Slimani-CE/ds-exam-resource-service
+[submodule "reservation-service"]
+	path = reservation-service
+	url = https://github.com/Slimani-CE/ds-exam-reservation-service
+[submodule "gateway-service"]
+	path = gateway-service
+	url = https://github.com/Slimani-CE/ds-exam-gateway-service
+[submodule "angular-frontend"]
+	path = angular-frontend
+	url = https://github.com/Slimani-CE/ds-exam-angular-frontend
+[submodule "react-frontend"]
+	path = react-frontend
+	url = https://github.com/Slimani-CE/ds-exam-react-frontend
