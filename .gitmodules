@@ -1,0 +1,6 @@
+[submodule "gateway-service"]
+	url = https://www.github.com/Slimani-CE/ds-exam-gateway-service.git
+[submodule "reservation-service"]
+	url = https://www.github.com/Slimani-CE/ds-exam-reservation-service.git
+[submodule "resource-service"]
+	url = https://www.github.com/Slimani-CE/ds-exam-resource-service.git
