@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a557ff49-d9d8-49d7-94cd-bf1d18655d07" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/img_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img_4.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/slimani/gatewayservice/GatewayServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/slimani/gatewayservice/GatewayServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reservation-service" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reservation-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/service/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservation-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resource-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/slimanice/resourceservice/ResourceServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service/src/main/java/com/slimani/resourceservice/ResourceServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/slimanice/resourceservice/controller/ResourceRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service/src/main/java/com/slimani/resourceservice/controller/ResourceRestController.java" afterDir="false" />
@@ -20,6 +28,7 @@
       <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/slimanice/resourceservice/repository/ResourceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service/src/main/java/com/slimani/resourceservice/repository/ResourceRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/slimanice/resourceservice/service/ResourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service/src/main/java/com/slimani/resourceservice/service/ResourceService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/slimanice/resourceservice/service/ResourceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service/src/main/java/com/slimani/resourceservice/service/ResourceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resource-service/src/test/java/com/slimanice/resourceservice/ResourceServiceImplApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service/src/test/java/com/slimani/resourceservice/ResourceServiceImplApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +48,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/reservation-service" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/gateway-service" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -189,13 +198,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ResourceServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="resource-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.slimani.resourceservice.ResourceServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ResourceServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
       <module name="resource-service" />
@@ -217,7 +219,6 @@
     </configuration>
     <list>
       <item itemvalue="HTTP Request.generated-requests | #1" />
-      <item itemvalue="Spring Boot.ResourceServiceApplication (1)" />
       <item itemvalue="Spring Boot.ResourceServiceApplication" />
       <item itemvalue="Spring Boot.GatewayServiceApplication" />
       <item itemvalue="Spring Boot.ReservationServiceApplication" />
@@ -239,7 +240,7 @@
       <workItem from="1704040111390" duration="1029000" />
       <workItem from="1704041935720" duration="10259000" />
       <workItem from="1704103103452" duration="774000" />
-      <workItem from="1704104003080" duration="3872000" />
+      <workItem from="1704104003080" duration="10323000" />
     </task>
     <servers />
   </component>
