@@ -5,55 +5,90 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a557ff49-d9d8-49d7-94cd-bf1d18655d07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_stephenc_jcip_jcip_annotations_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_nimbus_jose_jwt_9_24_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_oauth2_resource_server_3_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_6_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_6_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_oauth2_core_6_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_oauth2_jose_6_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_oauth2_resource_server_6_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_6_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img_12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img_13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/setupTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitmodules" beforeDir="false" afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_11_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_core_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_slf4j_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_form_feign_form_3_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_form_feign_form_spring_3_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_hateoas_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_openfeign_core_4_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_openfeign_4_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_hateoas_spring_hateoas_2_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/data/db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/Components/persons/persons.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/Components/persons/persons.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/Components/persons/persons.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/Components/persons/persons.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/Components/reservations/reservations.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/Components/reservations/reservations.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/Components/reservations/reservations.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/Components/reservations/reservations.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/Components/resources/resources.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/Components/resources/resources.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/Components/resources/resources.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/Components/resources/resources.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/enums/resource-type.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/guards/auth.guard.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/guards/auth.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/models/person.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/models/reservation.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/models/resource.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/services/person.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/services/person.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/services/reservation.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/services/reservation.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/services/resource.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/services/resource.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular-frontend/src/assets/silent-check-sso.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/controller/ResourceRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/enums/ResourceType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/exceptions/ReservationNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/exceptions/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/feign/ResourceFeignClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/model/Resource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/security/FeignSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource-service/src/main/java/com/slimani/resourceservice/exceptions/ResourceNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-12-31T192603.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular-frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-frontend" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-frontend/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/src/app/app.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular-frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway-service" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/slimani/gatewayservice/GatewayServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/slimani/gatewayservice/GatewayServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservation-service" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservation-service/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reservation-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/ReservationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/ReservationServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/controller/ReservationRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/controller/ReservationRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource-service" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/dto/ReservationRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/dto/ReservationRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/dto/ReservationResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/dto/ReservationResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/entity/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/entity/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/mapper/ReservationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/mapper/ReservationMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/service/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/service/ReservationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/service/ReservationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservation-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resource-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/slimani/resourceservice/controller/ResourceRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service/src/main/java/com/slimani/resourceservice/controller/ResourceRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/slimani/resourceservice/service/ResourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service/src/main/java/com/slimani/resourceservice/service/ResourceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/slimani/resourceservice/service/ResourceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service/src/main/java/com/slimani/resourceservice/service/ResourceServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,13 +101,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="TypeScript File" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/angular-frontend" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -107,15 +144,23 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/itsmu/Downloads/yet-another-emoji-support/lib/yet-another-emoji-support-1.0.7.jar&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;c3f7de153d7dec522a5ca2d91cc82b19&quot;
+    &quot;spring.configuration.checksum&quot;: &quot;7d8b4d2905ff3e6edbfe0926dd399908&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Fullstack\\distributed_systems_exam\\angular-frontend\\node_modules\\typescript\\lib&quot;
   }
 }</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.slimani.reservationservice.exceptions" />
+      <recent name="com.slimani.resourceservice.exceptions" />
+      <recent name="com.slimani.reservationservice.enums" />
+      <recent name="com.slimani.reservationservice.security" />
       <recent name="com.slimani.reservationservice.mapper" />
-      <recent name="com.slimani.reservationservice.dto" />
-      <recent name="com.slimanice.resourceservice.dto" />
-      <recent name="com.slimanice.resourceservice.mapper" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Fullstack\distributed_systems_exam\angular-frontend\src\app\Components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -146,7 +191,19 @@
       <option name="OPTIONS" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
+    <configuration name="rest-api_7 | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_7.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="rest-api_7 | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_7.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="rest-api_8 | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_8.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="rest-api_8 | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_8.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="rest-api_8 | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api_8.http" index="3" requestIdentifier="#3" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
@@ -242,14 +299,22 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="HTTP Request.generated-requests | #1" />
+      <item itemvalue="HTTP Request.rest-api_8 | #1" />
+      <item itemvalue="HTTP Request.rest-api_8 | #2" />
+      <item itemvalue="HTTP Request.rest-api_8 | #3" />
+      <item itemvalue="HTTP Request.rest-api_7 | #2" />
+      <item itemvalue="HTTP Request.rest-api_7 | #1" />
       <item itemvalue="Spring Boot.ResourceServiceApplication" />
       <item itemvalue="Spring Boot.GatewayServiceApplication" />
       <item itemvalue="Spring Boot.ReservationServiceApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.generated-requests | #1" />
+        <item itemvalue="HTTP Request.rest-api_8 | #1" />
+        <item itemvalue="HTTP Request.rest-api_8 | #2" />
+        <item itemvalue="HTTP Request.rest-api_8 | #3" />
+        <item itemvalue="HTTP Request.rest-api_7 | #2" />
+        <item itemvalue="HTTP Request.rest-api_7 | #1" />
       </list>
     </recent_temporary>
   </component>
@@ -264,7 +329,9 @@
       <workItem from="1704040111390" duration="1029000" />
       <workItem from="1704041935720" duration="10259000" />
       <workItem from="1704103103452" duration="774000" />
-      <workItem from="1704104003080" duration="20661000" />
+      <workItem from="1704104003080" duration="25085000" />
+      <workItem from="1704137711711" duration="3070000" />
+      <workItem from="1704173067409" duration="29065000" />
     </task>
     <servers />
   </component>

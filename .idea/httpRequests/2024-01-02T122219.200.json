@@ -1,0 +1,23 @@
+[
+  {
+    "id": "f8e3c45c-f3fc-41aa-9ba4-e3aff331f568",
+    "name": "IT Club Conference",
+    "context": "IT Club Conference 2020",
+    "createdAt": "2024-01-02T10:55:12.770+00:00",
+    "duration": "PT2H"
+  },
+  {
+    "id": "6fbb2ff9-ef2d-4e6c-9cd9-78c825139130",
+    "name": "IT Club Workshop",
+    "context": "IT Club Workshop 2020",
+    "createdAt": "2024-01-02T10:55:13.016+00:00",
+    "duration": "PT1H"
+  },
+  {
+    "id": "c9af0244-ddec-4f98-9038-c6a55f8d3e14",
+    "name": "IT Club Meeting",
+    "context": "IT Club Meeting 2020",
+    "createdAt": "2024-01-02T10:55:13.018+00:00",
+    "duration": "PT1H"
+  }
+]

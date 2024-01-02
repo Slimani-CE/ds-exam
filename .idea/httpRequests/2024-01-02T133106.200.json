@@ -1,0 +1,27 @@
+[
+  {
+    "id": "f7914a45-6899-4df3-843c-06222da76863",
+    "name": "HP Laptop",
+    "type": "VIDEO_AUDIO_MATERIAL"
+  },
+  {
+    "id": "d7f35c30-17f4-425c-a711-34fbde42c5b5",
+    "name": "Printer",
+    "type": "VIDEO_AUDIO_MATERIAL"
+  },
+  {
+    "id": "9bc85e0e-3ae2-41c2-aaab-a0f26f9ccb90",
+    "name": "Scanner",
+    "type": "VIDEO_AUDIO_MATERIAL"
+  },
+  {
+    "id": "c87a5142-4d28-4fd8-8a37-e4208f30a6cf",
+    "name": "Projector",
+    "type": "INFO_MATERIAL"
+  },
+  {
+    "id": "a2cd9c47-b6e7-42c8-aba8-44f7e44373d7",
+    "name": "Server",
+    "type": "VIDEO_AUDIO_MATERIAL"
+  }
+]

@@ -1,0 +1,46 @@
+# Docker Compose Of the Application and Databases
+# Version: 1.0
+
+services:
+  # ResourceModel Service Configuration
+  ## ResourceModel Service Database Configuration
+  resource-db:
+    image: mariadb:10.6
+    container_name: resource-db
+    restart: always
+    volumes:
+      resource_db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: resource-db
+      MYSQL_USER: slimani
+      MYSQL_PASSWORD: password
+    ports:
+      - 3306:3306
+    expose:
+      - 3306
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 5s
+      retries: 10
+
+  ## ResourceModel Service Application Configuration
+  resource-service:
+    image: resource-service
+    container_name: resource-service
+    restart: always
+    ports:
+      - 8081:8083
+    expose:
+      - 8083
+    depends_on:
+      - resource-db
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8081/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+# Volumes
+volumes:
+  resource_db:
