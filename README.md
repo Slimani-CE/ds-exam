@@ -9,8 +9,8 @@
    4. [Modules 📦](#modules)
 3. [Installation and Execution 📦](#installation-and-execution)
 4. [Testing microservices ✅](#testing-microservices)
-   1. [ReservationModel Service 📝](#reservation-service)
-   2. [ResourceModel Service 📝](#resource-service)
+   1. [Reservation Service 📝](#reservation-service)
+   2. [Resource Service 📝](#resource-service)
 5. [Frontend Module with Angular 🖥️](#frontend-module-with-angular)
 7. [Securing the system 🔒](#securing-the-system)
    1. [Setting up Keycloak 🔑](#setting-up-keycloak)
@@ -377,4 +377,7 @@ consul agent -config-file=config.json
    **3. Reservation Service**\
 10. For Angular Frontend; install dependencies using ``npm install --force``
 
-## Testing Microservices
+## Testing microservices ✅
+| Fetch All Resources                        | Fetch All Reservations                       |  
+|--------------------------------------------|----------------------------------------------|
+| ![Fetch All Resources](assets/img_3.png)   | ![Fetch All Reservations](assets/img_4.png)  |
