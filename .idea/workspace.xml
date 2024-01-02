@@ -5,17 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a557ff49-d9d8-49d7-94cd-bf1d18655d07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_11_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_core_13_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_slf4j_13_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_form_feign_form_3_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_form_feign_form_spring_3_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_hateoas_3_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_openfeign_core_4_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_openfeign_4_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_hateoas_spring_hateoas_2_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_3_0_0.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/angular-frontend/data/db.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/Components/persons/persons.component.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/Components/persons/persons.component.html" afterDir="false" />
@@ -42,10 +31,8 @@
       <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/services/resource.service.spec.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/services/resource.service.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/angular-frontend/src/assets/silent-check-sso.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/gateway-service/Dockerfile" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/reservation-service/Dockerfile" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/controller/ResourceRestController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/enums/ResourceType.java" afterDir="false" />
@@ -57,9 +44,6 @@
       <change afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/security/SecurityConfig.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resource-service/Dockerfile" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resource-service/src/main/java/com/slimani/resourceservice/exceptions/ResourceNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2023-12-31T192603.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/angular-frontend" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/angular-frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/angular.json" afterDir="false" />
@@ -73,6 +57,7 @@
       <change beforePath="$PROJECT_DIR$/angular-frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/angular-frontend/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway-service" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/slimani/gatewayservice/GatewayServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/slimani/gatewayservice/GatewayServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservation-service" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reservation-service/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reservation-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/ReservationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/ReservationServiceApplication.java" afterDir="false" />
@@ -84,6 +69,7 @@
       <change beforePath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/service/ReservationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/service/ReservationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/service/ReservationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reservation-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/reservation-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-service" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resource-service/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resource-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resource-service/src/main/java/com/slimani/resourceservice/controller/ResourceRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-service/src/main/java/com/slimani/resourceservice/controller/ResourceRestController.java" afterDir="false" />
@@ -332,6 +318,7 @@
       <workItem from="1704104003080" duration="25085000" />
       <workItem from="1704137711711" duration="3070000" />
       <workItem from="1704173067409" duration="29065000" />
+      <workItem from="1704221703894" duration="38000" />
     </task>
     <servers />
   </component>

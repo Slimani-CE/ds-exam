@@ -24,3 +24,6 @@ This project is a distributed system that allows the management of resources and
 ## Project Structure 📁
 ### Architecture 🏗️
 ![Architecture](assets/Architecture.png)
+
+### Class Diagram
+![Class Diagram](assets/Class%20Diagram.png)
