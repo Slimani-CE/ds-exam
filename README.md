@@ -8,13 +8,14 @@
    3. [Technologies 🛠️](#technologies)
    4. [Modules 📦](#modules)
 3. [Installation and Execution 📦](#installation-and-execution)
-4. [Frontend Module with Angular 🖥️](#frontend-module-with-angular)
-5. [Securing the system 🔒](#securing-the-system)
+4. [OpenAPI Documentation 📖](#openapi-documentation)
+5. [Frontend Module with Angular 🖥️](#frontend-module-with-angular)
+6. [Securing the system 🔒](#securing-the-system)
    1. [Setting up Keycloak 🔑](#setting-up-keycloak)
    2. [Setting up security in the microservices 🔒](#setting-up-security-in-the-microservices)
    3. [Setting up security in the frontend module 🔒](#setting-up-security-in-the-frontend-module)
-6. [Testing microservices ✅](#testing-microservices-)
-7. [Docker 🐳](#docker)
+7. [Testing microservices ✅](#testing-microservices-)
+8. [Docker 🐳](#docker)
    1. [Dockerizing the microservices 🐳](#dockerizing-the-microservices)
    2. [Dockerizing the frontend module 🐳](#dockerizing-the-frontend-module)
    3. [Docker Compose 🐳](#docker-compose)
@@ -375,6 +376,11 @@ consul agent -config-file=config.json
    **2. Resource Service**\
    **3. Reservation Service**\
 10. For Angular Frontend; install dependencies using ``npm install --force``
+
+## OpenAPI Documentation 📖
+| Reservation Service Documentation (Inculding a Feign endpoint) | Resource Service Documentation                       |
+|----------------------------------------------------------------|------------------------------------------------------|
+| ![Reservation Service Documentation](assets/img_15.png)        | ![Resource Service Documentation](assets/img_14.png) |
 
 ## Frontend Module with Angular 🖥️
 
