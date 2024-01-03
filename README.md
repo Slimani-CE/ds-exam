@@ -14,7 +14,7 @@
    1. [Setting up Keycloak 🔑](#setting-up-keycloak)
    2. [Setting up security in the microservices 🔒](#setting-up-security-in-the-microservices)
    3. [Setting up security in the frontend module 🔒](#setting-up-security-in-the-frontend-module)
-7. [Testing microservices ✅](#testing-microservices-)
+7. [Testing Security of microservices & Frontend ✅](#testing-microservices-)
 8. [Docker 🐳](#docker)
    1. [Dockerizing the microservices 🐳](#dockerizing-the-microservices)
    2. [Dockerizing the frontend module 🐳](#dockerizing-the-frontend-module)
@@ -384,6 +384,7 @@ consul agent -config-file=config.json
 
 ## Frontend Module with Angular 🖥️
 
+
 ## Securing the system 🔒
 ### Setting up Keycloak 🔑
 1. Download Keycloak from [here](https://www.keycloak.org/downloads)
@@ -557,7 +558,7 @@ spring.security.oauth2.resourceserver.jwt.jwk-set-uri=http://localhost:8080/real
 ### Setting up security in the frontend module 🔒
 
 
-## Testing microservices ✅
+## Testing Security of microservices & Frontend ✅
 ### Resource Service ✅
 | Try Fetch Resources without Authentication       | Create a resource using Access Token              | 
 |--------------------------------------------------|---------------------------------------------------|
@@ -591,3 +592,20 @@ spring.security.oauth2.resourceserver.jwt.jwk-set-uri=http://localhost:8080/real
 | Update a reservation using Access Token             | Delete Reservation by Id using Access Token      |           
 |-----------------------------------------------------|--------------------------------------------------|
 | ![Fetch All Reservations](assets/postman/img_4.png) | ![Fetch All Resources](assets/postman/img_5.png) |
+
+### Frontend Module ✅
+| User home page         | Login page                                        |
+|------------------------|---------------------------------------------------|
+| ![Fetch All Resources](assets/frontend/img.png) | ![Fetch All Resources](assets/frontend/img_1.png) |
+
+| Authenticated Admin Home Page | Authenticated User Profile Page                   |
+|-------------------------------|---------------------------------------------------|
+| ![Fetch All Resources](assets/frontend/img_2.png) | ![Fetch All Resources](assets/frontend/img_3.png) |
+
+| Reservation Page         | Resource Page                                     |
+|--------------------------|---------------------------------------------------|
+| ![Fetch All Resources](assets/frontend/img_4.png) | ![Fetch All Resources](assets/frontend/img_5.png) |
+
+| Explore A Reservation                             | Explore A Reservation                             |
+|---------------------------------------------------|---------------------------------------------------|
+| ![Fetch All Resources](assets/frontend/img_6.png) | ![Fetch All Resources](assets/frontend/img_7.png) |
