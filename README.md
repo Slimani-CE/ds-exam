@@ -83,8 +83,9 @@ C:.
 #### Consul Config Service ⚙️
 This microservice is responsible for centralizing the configuration of the microservices.
 
-**Consul Config Service UI Test**
-![Consul Config Service UI Test](assets/Consul%20Config%20Service%20UI%20Test.png)
+| Consul Config Service UI Test                              | Reservation Service Config                         |
+|-------------------------------------------------|----------------------------------------------------|
+|![Consul Config Service UI Test](assets/Consul%20Config%20Service%20UI%20Test.png) | ![Consul Config Service UI Test](assets/img_5.png) |
 
 #### Reservation Service 📝
 This microservice is responsible for managing the reservations and person. And it communicates with the Resource Service to get the resources.
@@ -395,3 +396,159 @@ consul agent -config-file=config.json
 |------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ![Fetch All Resources](assets/keycloak/img_2.png)  ![Fetch All Resources](assets/keycloak/img_3.png) | ![Fetch All Reservations](assets/keycloak/img_4.png)![Fetch All Reservations](assets/keycloak/img_5.png)![Fetch All Reservations](assets/keycloak/img_6.png) ![Fetch All Reservations](assets/keycloak/img_7.png) |
 
+| 6. Create Client for Resource Service                                                                | 7. Save the Resource Service Client Secret for later use |
+|------------------------------------------------------------------------------------------------------|----------------------------------------------------------|
+| ![Fetch All Resources](assets/keycloak/img_8.png)  ![Fetch All Resources](assets/keycloak/img_9.png) | ![Fetch All Resources](assets/keycloak/img_10.png)       |
+
+| 8. Create some Roles                                                                                   | 8. Create some roles                                                                                  |
+|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| ![Fetch All Resources](assets/keycloak/img_11.png)  ![Fetch All Resources](assets/keycloak/img_12.png) | ![Fetch All Resources](assets/keycloak/img_13.png) ![Fetch All Resources](assets/keycloak/img_14.png) |
+
+| 9. Create some Users                                                                                   | 9. Create some Users                                                                                  |
+|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| ![Fetch All Resources](assets/keycloak/img_15.png)  ![Fetch All Resources](assets/keycloak/img_16.png) | ![Fetch All Resources](assets/keycloak/img_17.png)  |
+
+| 10. Create User credentials                                                                           | 11. Assign Users some Roles                                                                            | 
+|-------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| ![Fetch All Resources](assets/keycloak/img_20.png) ![Fetch All Resources](assets/keycloak/img_21.png) | ![Fetch All Resources](assets/keycloak/img_18.png)  ![Fetch All Resources](assets/keycloak/img_19.png) |
+
+## Setting up security in the microservices 🔒
+### Reservation Service 🔒
+1. Add ``OAuth2ResourceServer`` dependency to ``pom.xml``
+2. Create A Configuration Bean in ``SecurityConfig.java`` file
+```java
+@Configuration
+@EnableWebSecurity
+@EnableMethodSecurity(prePostEnabled = true)
+public class SecurityConfig {
+    private final JwtAuthConverter jwtAuthConverter;
+
+    public SecurityConfig(JwtAuthConverter jwtAuthConverter) {
+        this.jwtAuthConverter = jwtAuthConverter;
+    }
+
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        return http
+                .authorizeHttpRequests(request -> request.requestMatchers("/actuator/**", "/reservations/auth", "/h2-console/**", "/swagger-ui/**", "/v3/api-docs/**").permitAll())
+                .authorizeHttpRequests(request -> request.anyRequest().authenticated())
+                .headers(hc -> hc.frameOptions(HeadersConfigurer.FrameOptionsConfig::disable))
+                .csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**"))
+                .oauth2ResourceServer(oauth2 -> oauth2.jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthConverter)))
+                .build();
+    }
+}
+```
+3. Create A Configuration Bean for Feign Client in ``FeignSecurityConfig.java`` file
+```java
+@Configuration
+public class FeignSecurityConfig implements RequestInterceptor {
+    @Override
+    public void apply(RequestTemplate requestTemplate) {
+        SecurityContext context = SecurityContextHolder.getContext();
+        JwtAuthenticationToken authentication = (JwtAuthenticationToken) context.getAuthentication();
+        String tokenValue = authentication.getToken().getTokenValue();
+        requestTemplate.header("Authorization","Bearer "+tokenValue);
+    }
+}
+```
+4. Create A JWT Authentication Converter in ``JwtAuthConverter.java`` file
+```java
+@Component
+public class JwtAuthConverter implements Converter<Jwt, AbstractAuthenticationToken> {
+    private final JwtGrantedAuthoritiesConverter jwtGrantedAuthoritiesConverter = new JwtGrantedAuthoritiesConverter();
+
+    @Override
+    public AbstractAuthenticationToken convert(Jwt jwt) {
+        Collection<GrantedAuthority> authorities = Stream.concat(
+                jwtGrantedAuthoritiesConverter.convert(jwt).stream(),
+                extractResourceRoles(jwt).stream()
+        ).collect(Collectors.toSet());
+        return new JwtAuthenticationToken(jwt, authorities, jwt.getClaim("preferred_username"));
+    }
+
+    private Collection<GrantedAuthority> extractResourceRoles(Jwt jwt) {
+        Map<String, Object> realmAccess;
+        Collection<String> roles;
+        if (jwt.getClaim("realm_access") == null) {
+            return Set.of();
+        }
+        realmAccess = jwt.getClaim("realm_access");
+        roles = (Collection<String>) realmAccess.get("roles");
+        return roles.stream().map(SimpleGrantedAuthority::new).collect(Collectors.toSet());
+    }
+}
+```
+5. Update Controller to use ``@PreAuthorize("hasAuthority('ADMIN')")`` or ``@PreAuthorize("hasAuthority('USER')")`` annotations
+```java
+// Get reservation by id
+@GetMapping("/{id}")
+@PreAuthorize("hasAuthority('ADMIN')")
+public ResponseEntity<ReservationResponseDTO> getReservationById(@PathVariable String id) {
+  try {
+      return ResponseEntity.ok(reservationService.getReservationById(id));
+  } catch (ReservationNotFoundException e) {
+      return ResponseEntity.notFound().build();
+  }
+}
+```
+6. Update ``application.properties`` file to use Keycloak (For our case we are using Consul Config Service)
+```properties
+spring.security.oauth2.resourceserver.jwt.issuer-uri=http://localhost:8080/realms/[REALM_NAME]
+spring.security.oauth2.resourceserver.jwt.jwk-set-uri=http://localhost:8080/realms/[REALM_NAME]/protocol/openid-connect/certs
+```
+7. The ``Reservation Service`` we will be communicating with The ``Resource Service``. And this last one is Client Authentication based. Hence, we need to add the ``Resource Service Client`` Configuration to the ``application.properties`` file of the ``Reservation Service`` (For our case we are using Consul Config Service)
+
+```properties
+spring.security.oauth2.client.registration.keycloak.client-name=keycloak
+spring.security.oauth2.client.registration.keycloak.client-id=resource-service
+spring.security.oauth2.client.registration.keycloak.client-secret=[RESOURCE_SERVICE_CLIENT_SECRET]
+spring.security.oauth2.client.registration.keycloak.scope=openid,profile,email,offline_access
+spring.security.oauth2.client.registration.keycloak.authorization-grant-type=authorization_code
+spring.security.oauth2.client.registration.keycloak.redirect-uri=${KEYCLOAK_REDIRECT_URI:http://localhost:8090/login/oauth2/code/resource-service}
+spring.security.oauth2.client.provider.keycloak.issuer-uri=${KEYCLOAK_ISSUER_URI:http://localhost:8080/realms/ds-exam-realm}
+```
+
+### Resource Service 🔒
+1. Add ``OAuth2ResourceServer`` dependency to ``pom.xml``
+2. Create A Configuration Bean in ``SecurityConfig.java`` file
+```java
+@Configuration
+@EnableWebSecurity
+@EnableMethodSecurity(prePostEnabled = true)
+public class SecurityConfig {
+    private final JwtAuthConverter jwtAuthConverter;
+
+    public SecurityConfig(JwtAuthConverter jwtAuthConverter) {
+        this.jwtAuthConverter = jwtAuthConverter;
+    }
+
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        return http
+                .authorizeHttpRequests(request -> request.requestMatchers("/actuator/**", "/resources/auth", "/resources/test", "/h2-console/**", "/swagger-ui/**", "/v3/api-docs/**").permitAll())
+                .authorizeHttpRequests(request -> request.anyRequest().authenticated())
+                .headers(hc -> hc.frameOptions(HeadersConfigurer.FrameOptionsConfig::disable))
+                .csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**"))
+                .oauth2ResourceServer(oauth2 -> oauth2.jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthConverter)))
+                .build();
+    }
+
+    @Bean
+    CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOrigins(List.of("*"));
+        configuration.setAllowedMethods(List.of("*"));
+        configuration.setAllowedHeaders(List.of("*"));
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+        return source;
+    }
+}
+```
+3. Secure endpoints using ``@PreAuthorize("hasAuthority('ADMIN')")`` or ``@PreAuthorize("hasAuthority('USER')")`` annotations
+4. Update ``application.properties`` file to use Keycloak (For our case we are using Consul Config Service)
+```properties
+spring.security.oauth2.resourceserver.jwt.issuer-uri=http://localhost:8080/realms/[REALM_NAME]
+spring.security.oauth2.resourceserver.jwt.jwk-set-uri=http://localhost:8080/realms/[REALM_NAME]/protocol/openid-connect/certs
+```
