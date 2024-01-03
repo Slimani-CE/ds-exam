@@ -1,23 +1,22 @@
 # Distributed Systems Exam 🚀
 
 ## Table of Contents 📋
-1. [Introduction 📜](#introduction)
-2. [Project Structure 📁](#project-structure)
-   1. [Architecture 🏗️](#architecture)
+1. [Introduction 📜](#introduction-📜)
+2. [Project Structure 📁](#project-structure-📁)
+   1. [Architecture 🏗️](#architecture-🏗️)
    2. [Class Diagram 📊](#class-diagram)
-   3. [Technologies 🛠️](#technologies)
-   4. [Modules 📦](#modules)
-3. [Installation and Execution 📦](#installation-and-execution)
-4. [OpenAPI Documentation 📖](#openapi-documentation)
-5. [Frontend Module with Angular 🖥️](#frontend-module-with-angular)
-6. [Securing the system 🔒](#securing-the-system)
-   1. [Setting up Keycloak 🔑](#setting-up-keycloak)
-   2. [Setting up security in the microservices 🔒](#setting-up-security-in-the-microservices)
-   3. [Setting up security in the frontend module 🔒](#setting-up-security-in-the-frontend-module)
-7. [Testing Security of microservices & Frontend ✅](#testing-microservices-)
-8. [Docker 🐳](#docker)
-   1. [Dockerizing the microservices 🐳](#dockerizing-the-microservices)
-   2. [Dockerizing the frontend module 🐳](#dockerizing-the-frontend-module)
+   3. [Technologies 🛠️](#technologies-🛠️)
+   4. [Modules 📦](#modules-📦)
+3. [Installation and Execution 📦](#Installation-and-Execution-📦)
+4. [OpenAPI Documentation 📖](#OpenAPI-Documentation-📖)
+5. [Securing the system 🔒](#securing-the-system-)
+   1. [Setting up Keycloak 🔑](#setting-up-keycloak-)
+   2. [Setting up security in the microservices 🔒](#setting-up-security-in-the-microservices-)
+   3. [Setting up security in the frontend module 🔒](#setting-up-security-in-the-frontend-module-)
+6. [Testing Security of microservices & Frontend ✅](#testing-security-of-microservices--frontend-)
+7. [Docker 🐳](#docker-)
+   1. [Dockerizing the microservices 🐳](#dockerizing-the-microservices-)
+   2. [Dockerizing the frontend module 🐳](#dockerizing-the-frontend-module-)
    3. [Docker Compose 🐳](#docker-compose)
 
 ## Introduction 📜
@@ -609,3 +608,173 @@ spring.security.oauth2.resourceserver.jwt.jwk-set-uri=http://localhost:8080/real
 | Explore A Reservation                             | Explore A Reservation                             |
 |---------------------------------------------------|---------------------------------------------------|
 | ![Fetch All Resources](assets/frontend/img_6.png) | ![Fetch All Resources](assets/frontend/img_7.png) |
+
+## Docker 🐳
+### Dockerizing the microservices 🐳
+#### Gateway Service
+1. Create Appication jar using ``mvn clean install``
+2. Create a ``Dockerfile`` in the root directory of the ``Gateway Service`` microservice
+```dockerfile
+FROM openjdk:21-oracle
+VOLUME /tmp
+COPY target/*.jar  app.jar
+ENTRYPOINT ["java","-jar", "app.jar"]
+```
+3. Build the docker image using ``docker build -t gateway-service .``
+
+#### Resource Service
+1. Create Appication jar using ``mvn clean install``
+2. Create a ``Dockerfile`` in the root directory of the ``Resource Service`` microservice
+```dockerfile
+FROM openjdk:21-oracle
+VOLUME /tmp
+COPY target/*.jar  app.jar
+ENTRYPOINT ["java","-jar", "app.jar"]
+```
+3. Build the docker image using ``docker build -t resource-service .``
+
+#### Reservation Service
+1. Create Appication jar using ``mvn clean install``
+2. Create a ``Dockerfile`` in the root directory of the ``Reservation Service`` microservice
+```dockerfile
+FROM openjdk:21-oracle
+VOLUME /tmp
+COPY target/*.jar  app.jar
+ENTRYPOINT ["java","-jar", "app.jar"]
+```
+3. Build the docker image using ``docker build -t reservation-service .``
+
+### Dockerizing the frontend module 🐳
+1. Create a ``Dockerfile`` in the root directory of the ``Angular Frontend Module``
+```dockerfile
+FROM node:17-alpine
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+RUN npm run build --prod
+EXPOSE 4200
+CMD ["npm", "start"]
+```
+2. Build the docker image using ``docker build -t frontend-module .``
+
+### Docker Compose
+```yaml
+# Docker Compose Of the Application and Databases
+# Version: 1.0
+
+services:
+  # Resource Service Configuration
+  ## Resource Service Database Configuration
+  resource_db:
+    image: mariadb:10.6
+    container_name: resource_db
+    restart: always
+    volumes:
+      resource_db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: resource_db
+      MYSQL_USER: slimani
+      MYSQL_PASSWORD: password
+    ports:
+      - 3306:3306
+    expose:
+      - 3306
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 5s
+      retries: 10
+
+  ## Resource Service Application Configuration
+  resource-service:
+    image: resource-service
+    container_name: resource-service
+    restart: always
+    ports:
+      - 8081:8081
+    expose:
+      - 8081
+    depends_on:
+      - resource_db
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8081/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # Reservation Service Configuration
+  ## Reservation Service Database Configuration
+  reservation_db:
+    image: mariadb:10.6
+    container_name: reservation_db
+    restart: always
+    volumes:
+      reservation_db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: reservation_db
+      MYSQL_USER: slimani
+      MYSQL_PASSWORD: password
+    ports:
+      - 3307:3306
+    expose:
+      - 3307
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 5s
+      retries: 10
+
+  ## Resource Service Application Configuration
+  reservation-service:
+    image: reservation-service
+    container_name: reservation-service
+    restart: always
+    ports:
+      - 8082:8082
+    expose:
+      - 8082
+    depends_on:
+      - reservation_db
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8082/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # Gateway Service Configuration
+  gateway-service:
+    image: gateway-service
+    container_name: gateway-service
+    restart: always
+    ports:
+      - 9999:9999
+    expose:
+      - 9999
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9999/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # Consul Service Configuration
+  consul-server:
+    image: hashicorp/consul:1.11.2
+    container_name: consul-server
+    restart: always
+    volumes:
+      - ./server.json:/consul/config/server.json:ro
+      - ./certs/:/consul/config/certs/:ro
+    networks:
+      - consul
+    ports:
+      - "8500:8500"
+      - "8600:8600/tcp"
+      - "8600:8600/udp"
+    command: "agent -bootstrap-expect=3"
+
+volumes:
+  resource_db:
+  reservation_db:
+```
