@@ -9,8 +9,6 @@
    4. [Modules 📦](#modules)
 3. [Installation and Execution 📦](#installation-and-execution)
 4. [Testing microservices ✅](#testing-microservices)
-   1. [Reservation Service 📝](#reservation-service)
-   2. [Resource Service 📝](#resource-service)
 5. [Frontend Module with Angular 🖥️](#frontend-module-with-angular)
 7. [Securing the system 🔒](#securing-the-system)
    1. [Setting up Keycloak 🔑](#setting-up-keycloak)
@@ -146,27 +144,27 @@ C:.
 ```
 
 **Reservation Service Code Snippets Examples**
-1. ResourceRestController.java (Short Code Example)
+1. ReservationRestController.java (Short Code Example)
 ```java
 @RestController
 @OpenAPIDefinition
 @RequestMapping("/resources")
-public class ResourceRestController {
-   private final ResourceFeignClientService resourceFeignClientService;
+public class ReservationRestController {
+   private final ReservationService reservationService;
 
-   public ResourceRestController(ResourceFeignClientService resourceFeignClientService) {
-      this.resourceFeignClientService = resourceFeignClientService;
+   public ReservationRestController(ReservationService reservationService) {
+      this.reservationService = reservationService;
    }
 
    // Rest of the code ...
 
-   // Get Resource By Id
+   // Get reservation by id
    @GetMapping("/{id}")
-   @PreAuthorize("hasAuthority('USER')")
-   public ResponseEntity<Resource> getResourceById(@PathVariable String id) {
+   @PreAuthorize("hasAuthority('ADMIN')")
+   public ResponseEntity<ReservationResponseDTO> getReservationById(@PathVariable String id) {
       try {
-         return ResponseEntity.ok(resourceFeignClientService.getResourceById(id));
-      } catch (ResourceNotFoundException e) {
+         return ResponseEntity.ok(reservationService.getReservationById(id));
+      } catch (ReservationNotFoundException e) {
          return ResponseEntity.notFound().build();
       }
    }
@@ -381,3 +379,19 @@ consul agent -config-file=config.json
 | Fetch All Resources                        | Fetch All Reservations                       |  
 |--------------------------------------------|----------------------------------------------|
 | ![Fetch All Resources](assets/img_3.png)   | ![Fetch All Reservations](assets/img_4.png)  |
+
+## Frontend Module with Angular 🖥️
+
+## Securing the system 🔒
+### Setting up Keycloak 🔑
+1. Download Keycloak from [here](https://www.keycloak.org/downloads)
+2. Start Keycloak using ``bin\kc.bat start-dev`` or ``bin\kc.sh start-dev`` for Linux. Head to [http://localhost:8080](http://localhost:8080) and create account. 
+
+| 3. Create account                               | 4. Login into account                                |
+|-------------------------------------------------|------------------------------------------------------|
+| ![Fetch All Resources](assets/keycloak/img.png) | ![Fetch All Reservations](assets/keycloak/img_1.png) |
+
+| 5. Creating Realm for project                                                                        | 6. Create Client for Reservation Service                                                                                                                                                                          |
+|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ![Fetch All Resources](assets/keycloak/img_2.png)  ![Fetch All Resources](assets/keycloak/img_3.png) | ![Fetch All Reservations](assets/keycloak/img_4.png)![Fetch All Reservations](assets/keycloak/img_5.png)![Fetch All Reservations](assets/keycloak/img_6.png) ![Fetch All Reservations](assets/keycloak/img_7.png) |
+
