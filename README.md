@@ -8,13 +8,13 @@
    3. [Technologies 🛠️](#technologies)
    4. [Modules 📦](#modules)
 3. [Installation and Execution 📦](#installation-and-execution)
-4. [Testing microservices ✅](#testing-microservices)
-5. [Frontend Module with Angular 🖥️](#frontend-module-with-angular)
-7. [Securing the system 🔒](#securing-the-system)
+4. [Frontend Module with Angular 🖥️](#frontend-module-with-angular)
+5. [Securing the system 🔒](#securing-the-system)
    1. [Setting up Keycloak 🔑](#setting-up-keycloak)
    2. [Setting up security in the microservices 🔒](#setting-up-security-in-the-microservices)
    3. [Setting up security in the frontend module 🔒](#setting-up-security-in-the-frontend-module)
-8. [Docker 🐳](#docker)
+6. [Testing microservices ✅](#testing-microservices-)
+7. [Docker 🐳](#docker)
    1. [Dockerizing the microservices 🐳](#dockerizing-the-microservices)
    2. [Dockerizing the frontend module 🐳](#dockerizing-the-frontend-module)
    3. [Docker Compose 🐳](#docker-compose)
@@ -376,11 +376,6 @@ consul agent -config-file=config.json
    **3. Reservation Service**\
 10. For Angular Frontend; install dependencies using ``npm install --force``
 
-## Testing microservices ✅
-| Fetch All Resources                        | Fetch All Reservations                       |  
-|--------------------------------------------|----------------------------------------------|
-| ![Fetch All Resources](assets/img_3.png)   | ![Fetch All Reservations](assets/img_4.png)  |
-
 ## Frontend Module with Angular 🖥️
 
 ## Securing the system 🔒
@@ -552,3 +547,41 @@ public class SecurityConfig {
 spring.security.oauth2.resourceserver.jwt.issuer-uri=http://localhost:8080/realms/[REALM_NAME]
 spring.security.oauth2.resourceserver.jwt.jwk-set-uri=http://localhost:8080/realms/[REALM_NAME]/protocol/openid-connect/certs
 ```
+
+### Setting up security in the frontend module 🔒
+
+
+## Testing microservices ✅
+### Resource Service ✅
+| Try Fetch Resources without Authentication       | Create a resource using Access Token              | 
+|--------------------------------------------------|---------------------------------------------------|
+| ![Fetch All Resources](assets/postman/img_7.png) | ![Fetch All Resources](assets/postman/img_14.png) |
+
+| Fetch All Resources using Access Token            | Fetch Resource by Id using Access Token           |           
+|---------------------------------------------------|---------------------------------------------------|
+| ![Fetch All Resources](assets/postman/img_10.png) | ![Fetch All Resources](assets/postman/img_11.png) |
+
+| Update a resource using Access Token                 | Delete Resource by Id using Access Token          |           
+|------------------------------------------------------|---------------------------------------------------|
+| ![Fetch All Reservations](assets/postman/img_12.png) | ![Fetch All Resources](assets/postman/img_13.png) |
+
+### Reservation Service ✅
+| Authentication to realm using password         |  
+|------------------------------------------------|
+| ![Fetch All Resources](assets/postman/img.png) |
+
+| Try Fetch Reservations without Authentication    | Try Fetch Reservations without Authorization     |   
+|--------------------------------------------------|--------------------------------------------------|
+| ![Fetch All Resources](assets/postman/img_8.png) | ![Fetch All Resources](assets/postman/img_9.png) |
+
+| Create new reservation                           |   
+|--------------------------------------------------|
+| ![Fetch All Resources](assets/postman/img_6.png) |
+
+| Fetch All Reservations using Access Token           | Fetch Reservation by Id using Access Token       |           
+|-----------------------------------------------------|--------------------------------------------------|
+| ![Fetch All Reservations](assets/postman/img_1.png) | ![Fetch All Resources](assets/postman/img_3.png) |
+
+| Update a reservation using Access Token             | Delete Reservation by Id using Access Token      |           
+|-----------------------------------------------------|--------------------------------------------------|
+| ![Fetch All Reservations](assets/postman/img_4.png) | ![Fetch All Resources](assets/postman/img_5.png) |

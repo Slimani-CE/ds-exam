@@ -31,23 +31,24 @@
       <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/services/resource.service.spec.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/angular-frontend/src/app/services/resource.service.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/angular-frontend/src/assets/silent-check-sso.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/keycloak/img_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/keycloak/img_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/keycloak/img_12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/keycloak/img_13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/keycloak/img_14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/keycloak/img_15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/keycloak/img_16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/keycloak/img_17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/keycloak/img_19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/keycloak/img_20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/keycloak/img_21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/keycloak/img_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/keycloak/img_9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/postman/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/postman/img_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/postman/img_10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/postman/img_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/postman/img_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/postman/img_13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/postman/img_14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/postman/img_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/postman/img_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/postman/img_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/postman/img_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/postman/img_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/postman/img_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/postman/img_8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/postman/img_9.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/gateway-service/Dockerfile" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/reservation-service/Dockerfile" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/controller/ResourceRestController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/reservation-service/src/main/java/com/slimani/reservationservice/enums/ResourceType.java" afterDir="false" />
@@ -335,7 +336,7 @@
       <workItem from="1704173067409" duration="29065000" />
       <workItem from="1704221703894" duration="4025000" />
       <workItem from="1704226210255" duration="2014000" />
-      <workItem from="1704258581669" duration="4093000" />
+      <workItem from="1704258581669" duration="7922000" />
     </task>
     <servers />
   </component>
